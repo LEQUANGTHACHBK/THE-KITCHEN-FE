@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "The-KitChen": {
+    "a": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/The-KitChen",
+            "outputPath": "dist/a",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -51,12 +47,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "4mb",
-                  "maximumError": "10mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -65,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "The-KitChen:build"
+            "browserTarget": "a:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "The-KitChen:build:production"
+              "browserTarget": "a:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "The-KitChen:build"
+            "browserTarget": "a:build"
           }
         },
         "test": {
@@ -91,7 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -113,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "The-KitChen:serve"
+            "devServerTarget": "a:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "The-KitChen:serve:production"
+              "devServerTarget": "a:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "The-KitChen",
+  "defaultProject": "a",
   "cli": {
-    "analytics": "d8f742b3-4a45-422f-bcf7-93173110cf82"
+    "analytics": "dc5ea0dd-360c-4089-b31a-1bcedeae1aa0"
   }
 }
